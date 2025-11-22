@@ -1,0 +1,60 @@
+.profile-setup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.profile-setup-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--pigeon-blue);
+}
+
+.profile-setup-form {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 28rem;
+}
+
+.profile-setup-input,
+.profile-setup-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.profile-setup-input:focus,
+.profile-setup-textarea:focus {
+  outline: none;
+  border-color: var(--pigeon-accent);
+}
+
+.profile-setup-button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--pigeon-blue);
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.profile-setup-button:hover {
+  background-color: var(--pigeon-accent);
+  transform: scale(1.02);
+}

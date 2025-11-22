@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Pigeon Brand Colors */
+  --pigeon-blue: #1a56db;
+  --pigeon-accent: #60a5fa;
+  --pigeon-red: #dc2626;
+
+  /* Theme Colors - Light Mode */
+  --bg-color: #f3f4f6;
+  --text-color: #1f2937;
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+  --input-bg: #f9fafb;
+  --glass-bg: rgba(255, 255, 255, 0.3);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode {
+  /* Theme Colors - Dark Mode */
+  --bg-color: #0f172a;
+  --text-color: #e5e7eb;
+  --card-bg: #1f2937;
+  --border-color: #374151;
+  --input-bg: #111827;
+  --glass-bg: rgba(31, 41, 55, 0.3);
+  --glass-border: rgba(75, 85, 99, 0.2);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.app-glass-container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 48rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,1 @@
+// This file can be removed or left as an empty placeholder since GIF functionality has been removed.

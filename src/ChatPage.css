@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5; /* A light background color */
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff; /* Chat container background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.messages-list {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.message.sent {
+  justify-content: flex-end;
+}
+
+.message-bubble {
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 70%;
+  position: relative;
+  word-wrap: break-word;
+  color: #000;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.message.sent .message-bubble {
+  background-color: #dcf8c6; /* WhatsApp's green for sent messages */
+}
+
+.message-meta {
+  font-size: 0.75rem;
+  color: #777;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.message.received .message-bubble {
+  background-color: #ffffff; /* White for received messages */
+}
+
+.message-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.message-input input {
+  flex-grow: 1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-right: 10px;
+}
+
+.message-input button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.logout-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

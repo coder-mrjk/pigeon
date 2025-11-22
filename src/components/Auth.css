@@ -1,0 +1,205 @@
+:root {
+  --background-light: #f4f7f6;
+  --background-dark: #121212;
+  --card-bg-light: #ffffff;
+  --card-bg-dark: #1e1e1e;
+  --text-color-light: #333333;
+  --text-color-dark: #e0e0e0;
+  --input-bg-light: #e8e8e8;
+  --input-bg-dark: #2a2a2a;
+  --border-color-light: #cccccc;
+  --border-color-dark: #444444;
+  --pigeon-blue: #007bff;
+  --pigeon-accent: #0056b3;
+  --pigeon-red: #dc3545;
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode {
+  --background: var(--background-dark);
+  --card-bg: var(--card-bg-dark);
+  --text-color: var(--text-color-dark);
+  --input-bg: var(--input-bg-dark);
+  --border-color: var(--border-color-dark);
+}
+
+.light-mode {
+  --background: var(--background-light);
+  --card-bg: var(--card-bg-light);
+  --text-color: var(--text-color-light);
+  --input-bg: var(--input-bg-light);
+  --border-color: var(--border-color-light);
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.auth-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--pigeon-blue);
+  transition: color 0.3s ease;
+}
+
+.dark-mode .auth-heading {
+  color: var(--pigeon-accent);
+}
+
+.auth-subheading {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.auth-form-wrapper {
+  width: 100%;
+  max-width: 24rem;
+}
+
+.auth-form {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(5px);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.dark-mode .auth-form {
+  background-color: rgba(31, 41, 55, 0.4);
+}
+
+.auth-form-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.auth-error-message {
+  color: var(--pigeon-red);
+  margin-bottom: 1rem;
+}
+
+.auth-input-container {
+  width: 100%;
+  max-width: 300px; /* This is the new rule to fix the width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.auth-input {
+  width: 100%;
+  max-width: 250px;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: var(--pigeon-accent);
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--pigeon-blue);
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.auth-button:hover {
+  background-color: var(--pigeon-accent);
+  transform: scale(1.02);
+}
+
+.auth-divider {
+  margin: 1rem 0;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.auth-divider-text {
+  margin: 1rem 0;
+  color: var(--text-color);
+  opacity: 0.7;
+  text-align: center;
+}
+
+.google-auth-button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.google-auth-button:hover {
+  background-color: var(--input-bg);
+  transform: scale(1.02);
+}
+
+.google-logo {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Password input field and show/hide button */
+.password-input-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.password-input-container .auth-input {
+  padding-right: 4rem;
+}
+
+.show-password-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--pigeon-blue);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem;
+}
+
+.password-reset-note {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-top: 1rem;
+  text-align: center;
+}
